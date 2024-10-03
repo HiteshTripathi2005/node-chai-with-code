@@ -13,6 +13,10 @@ app.get("/users", (req, res) => {
   res.send("users");
 });
 
+app.get("/users/:id", (req, res) => {
+  res.send(req.params.id);
+});
+
 app.get("/api", (req, res) => {
   res.json({
     success: true,
