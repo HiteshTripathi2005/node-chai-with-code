@@ -25,6 +25,22 @@ app.get("/api", (req, res) => {
   });
 });
 
+app.get("/api/users", (req, res) => {
+  res.json({
+    success: true,
+    users: [
+      {
+        name: "test",
+        age: 20,
+      },
+      {
+        name: "test2",
+        age: 21,
+      },
+    ],
+  });
+});
+
 app.listen(PORT, () => {
   console.log(`server is running on port ${PORT}`);
 });
