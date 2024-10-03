@@ -15,6 +15,10 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  AdditionalData: {
+    type: String,
+    required: false,
+  },
 });
 
 export const User = mongoose.model("User", userSchema);
